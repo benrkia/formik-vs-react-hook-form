@@ -22,7 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.1.1"
   }
 }
