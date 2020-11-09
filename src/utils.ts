@@ -34,8 +34,20 @@ export const jsonSchema = {
       type: "string",
       minLength: 6,
     },
+    country: {
+      type: "string",
+      minLength: 3,
+      maxLength: 3,
+    },
+    price: {
+      type: "integer",
+      moreThan: 100,
+    },
+    hasPhone: {
+      type: "boolean",
+    },
   },
-  required: ["firstName", "lastName", "email", "password"],
+  required: ["firstName", "lastName", "email", "password", "country", "price", "hasPhone"],
 };
 
 export const jsonSchemaConfig = {
@@ -55,6 +67,15 @@ export const jsonSchemaConfig = {
     password: {
       required: 'Password is required',
       min: 'Password must not be shorter than 6 chars',
+    },
+    country: {
+      required: 'Country is required',
+      min: 'Invalid country',
+      max: 'Invalid country',
+    },
+    price: {
+      required: 'Price is required',
+      moreThan: 'Price cannot be lower than 100',
     },
   }
 };
